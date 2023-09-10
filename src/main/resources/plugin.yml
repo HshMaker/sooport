@@ -1,0 +1,4 @@
+name: sooport
+version: '${project.version}'
+main: io.github.hshmaker.sooport.Sooport
+api-version: 1.20

@@ -1,0 +1,4 @@
+name: sooport
+version: '0.0.1'
+main: io.github.hshmaker.sooport.Sooport
+api-version: 1.20
