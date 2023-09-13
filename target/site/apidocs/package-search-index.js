@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"io.github.hshmaker.sooport"},{"l":"io.github.hshmaker.sooport.effect"}];updateSearchResults();

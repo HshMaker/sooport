@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.github.hshmaker.sooport.effect","l":"FireworkSupport"},{"p":"io.github.hshmaker.sooport","l":"Sooport"}];updateSearchResults();
