@@ -25,10 +25,13 @@ SOFTWARE.
 package io.github.hshmaker.sooport;
 
 import io.github.hshmaker.sooport.effect.FireworkSupport;
+import io.github.hshmaker.sooport.event.SooAction;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Firework;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.jetbrains.annotations.NotNull;
 
@@ -37,7 +40,9 @@ import org.jetbrains.annotations.NotNull;
  * @author HshMaker
  * @version 0.0.9
  */
-public class Sooport implements FireworkSupport {
+public class Sooport implements FireworkSupport, SooAction {
+
+    //FireworkSupport------------------------------------
 
     @Override
     public void spawnFirework(@NotNull Double x, @NotNull Double y, @NotNull Double z, @NotNull World world, @NotNull FireworkEffect effect) {
@@ -53,5 +58,32 @@ public class Sooport implements FireworkSupport {
     @Override
     public void spawnFirework(@NotNull Location loc, @NotNull FireworkEffect effect) {
         spawnFirework(loc.x(), loc.y(), loc.z(), loc.getWorld(), effect);
+    }
+
+    //SooAction---------------------------------------
+
+    @Override
+    public void LeftClickAir(PlayerInteractEvent event, Runnable runnable) {
+        if (event.getAction() == Action.LEFT_CLICK_AIR) {
+            runnable.run();
+        }
+    }
+    @Override
+    public void LeftClickBlock(PlayerInteractEvent event, Runnable runnable) {
+        if (event.getAction() == Action.LEFT_CLICK_BLOCK) {
+            runnable.run();
+        }
+    }
+    @Override
+    public void RightClickAir(PlayerInteractEvent event, Runnable runnable) {
+        if (event.getAction() == Action.RIGHT_CLICK_AIR) {
+            runnable.run();
+        }
+    }
+    @Override
+    public void RightClickBlock(PlayerInteractEvent event, Runnable runnable) {
+        if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            runnable.run();
+        }
     }
 }

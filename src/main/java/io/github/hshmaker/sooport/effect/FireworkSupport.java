@@ -41,12 +41,12 @@ public interface FireworkSupport {
      * @param world 속한 월드
      * @param effect 폭죽효과
      */
-    void spawnFirework(Double x, Double y, Double z, World world, FireworkEffect effect);
+    void spawnFirework(@NotNull Double x, @NotNull Double y, @NotNull Double z, @NotNull World world, @NotNull FireworkEffect effect);
 
     /**
      * 이 함수는 폭죽을 소환합니다.
      * @param loc 좌표
      * @param effect 폭죽효과
      */
-    void spawnFirework(@NotNull Location loc, FireworkEffect effect);
+    void spawnFirework(@NotNull Location loc, @NotNull FireworkEffect effect);
 }
